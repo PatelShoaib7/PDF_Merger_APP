@@ -62,6 +62,7 @@
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
     "minimatch": "^3.1.2",
+    "mongoose": "^7.5.0",
     "ms": "^2.0.0",
     "multer": "^1.4.5-lts.1",
     "negotiator": "^0.6.3",
@@ -96,6 +97,7 @@
     "type-is": "^1.6.18",
     "undefsafe": "^2.0.5",
     "unpipe": "^1.0.0",
+    "util": "^0.12.5",
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2",
     "yallist": "^4.0.0"
