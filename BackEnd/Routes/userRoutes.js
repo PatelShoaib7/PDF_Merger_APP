@@ -5,7 +5,11 @@ const upload_pdf = require("../Helper/upload_pdf");
 const userRoutes  = express.Router();
 const cloudinary  = require('cloudinary')
 
-userRoutes.post("/merge/uplaodPdf" ,upload_pdf.S3upload.single("file") ,user.MeregPDFs)
+userRoutes.get("/home" ,user.checkWorking)
+userRoutes.post("/add/user" ,user.colletUserData)
+userRoutes.post("/merge/single/uplaodPdf" ,upload_pdf.S3upload.single("file") ,user.MeregPDFs)
+
+
 
 module.exports = {
     userRoutes : userRoutes

@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended:true}))
 
 
 
+
 app.use("/user", userRoutes)
 app.use("/admin", adminRoutes) 
 
@@ -33,9 +34,8 @@ console.log("----app starteed--")
 
 
 app.listen(PORT || 8000, async (req, res)=>{
-
     await connection
-    if(!connection){
+    if(!connection){ 
         res.status(err.status || 500).send({
             errCode: 23,
             errMsg: 'Unable To Connect With DataBase'
