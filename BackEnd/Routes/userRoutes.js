@@ -14,6 +14,9 @@ userRoutes.post(
   upload_pdf.S3upload.single("file"),
   user.UploadPDF_S
 );
+userRoutes.get("/mergeAllPDF", user.mergeAllPDF);
+
+//
 
 module.exports = {
   userRoutes: userRoutes,

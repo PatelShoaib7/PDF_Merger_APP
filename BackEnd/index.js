@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 require("dotenv").config();
+const verifyOrigin = require("../BackEnd/middleware/verifyOrigin");
 const cloudinary = require("cloudinary");
 const PORT = process.env.PORT;
 const { userRoutes } = require("./Routes/userRoutes");
@@ -9,10 +10,13 @@ const { adminRoutes } = require("./Routes/adminRoutes");
 const { connection } = require("./services/dataBase");
 const utils = require("./utils/utils");
 app.use(express.json());
-app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+(bodyParser = require("body-parser")),
+  //VERIFY ORIGINS
+  app.use(cors());
+app.use(verifyOrigin);
 
 app.use("/user", userRoutes);
 app.use("/admin", adminRoutes);
